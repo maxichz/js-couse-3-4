@@ -44,7 +44,7 @@ describe('JS Basics', function () {
         });
 
         it('should be parse object from json', function () {
-            var json = '{"ok":true, metadata: {"date_start": 1533108640}'
+            var json = '{"ok":true, "metadata": {"date_start": 1533108640} }'
             
             // see JSON.parse function, use it and find key date_start
             assert.equal(dateStart, 1533108640);
