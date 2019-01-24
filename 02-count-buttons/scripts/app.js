@@ -9,18 +9,32 @@
     }
 
     var labelFirst = document.querySelector('#label-first');
-    var firstButton = document.querySelector('#btn-first');
+    var firstButtonAdd = document.querySelector('#btn-first-add');
+    var firstButtonSubtract = document.querySelector('#btn-first-subtract');
 
     var labelSecond = document.querySelector('#label-second');
-    var secondButton = document.querySelector('#btn-second');
+    var secondButtonAdd = document.querySelector('#btn-second-add');
+    var secondButtonSubtract = document.querySelector('#btn-second-subtract');
 
-    firstButton.addEventListener('click', function(e){
+    firstButtonAdd.addEventListener('click', function(e){
         state.first = state.first + 1;
         updateLabel(labelFirst, 'First button:', state.first)
     })
 
-    secondButton.addEventListener('click', function(e){
+    firstButtonSubtract.addEventListener('click', function(e){
+        state.first = state.first - 1;
+        updateLabel(labelFirst, 'First button:', state.first)
+    })
+
+    secondButtonAdd.addEventListener('click', function(e){
         state.second = state.second + 1;
         updateLabel(labelSecond, 'Second button:', state.second)
     });
+
+    secondButtonSubtract.addEventListener('click', function(e){
+        state.second = state.second - 1;
+        updateLabel(labelSecond, 'Second button:', state.second)
+    })
+
+
 })()
