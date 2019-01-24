@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Login form</title>
+    </head>
+    <body>
+        <form>
+            Name:<br>
+            <input id="name" class="form-name" type="text" name="name"><br>
+            Email:<br>
+            <input id="email" class="form-email" type="text" name="email"><br>
+            <button name="c" type="button">Submit</button>
+        </form>
+        <script> 
+       // var btn = document.getElementsByTagName("button")[0];
+       var btn = document.querySelector('button')
+       var nameField = document.querySelector('#name')
+       var emailField = document.querySelector('#email')
+
+       function validateName(){
+           if(nameField.value.length < 4){
+               alert('Name must be at least 4 characters!');
+               return false;
+           }
+               return true;
+       }
+
+       function validateEmail(){
+           if(emailField.value.indexOf('@') != -1 && emailField.value.length >= 3){
+               return true;
+           }
+           alert('Email must contain @ symbol and be minimum of 3 characters!')
+
+       }
+
+       btn.addEventListener('click', function(){
+       if(validateName() && validateEmail()){
+           alert('Registration is sucessful!');
+       }
+       })
+        </script>   
+    </body>
+</html>
